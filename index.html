@@ -65,7 +65,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 /* shell */
 .shell{display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;padding-block:28px 120px;max-width:1440px;margin:0 auto}
 .shell.wp{grid-template-columns:230px minmax(0,1fr) 420px}
-.rail ol{list-style:none;margin:0;padding:0;display:grid;gap:4px;position:sticky;top:90px}
+.rail{position:sticky;top:90px;align-self:start}
+.rail ol{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .rail li button{all:unset;display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:var(--r);width:100%;box-sizing:border-box;cursor:default;color:var(--muted);font-size:14px}
 .rail li button .n{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:500 12px var(--mono);flex:none;background:var(--surface)}
 .rail li.done button{cursor:pointer;color:var(--ink)}
@@ -259,7 +260,8 @@ main{min-width:0}
 }
 @media (max-width:820px){
   .shell,.shell.wp{grid-template-columns:minmax(0,1fr);gap:18px;padding-top:16px}
-  .rail ol{position:static;display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+  .rail{position:static}
+  .rail ol{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
   .rail li button{padding:6px 8px;white-space:nowrap;font-size:13px}
   .rail li:not(.cur) .lbl{display:none}
   .rail .meta{display:none}
